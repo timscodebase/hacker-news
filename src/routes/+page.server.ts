@@ -18,7 +18,8 @@ let story_links: string[] = []
 let page = 1
 const pageSize = number_of_topstories
 
-export const load: PageServerLoad = async ({ fetch }) => {
+export const load: PageServerLoad = async ({ fetch, url }) => {
+  const base_url = url.origin
   const response = await fetch(`${base_url}/api/topstories.json`)
   const story_ids: number[] = await response.json()
 
