@@ -1,0 +1,95 @@
+:root {
+  --black: rgba(31, 35, 38, 1);
+  --dark-green: rgba(108, 114, 60, 1);
+  --green: rgba(157, 165, 92, 1);
+  --gray: rgba(139, 140, 136, 1);
+  --grey: var(--gray);
+  --white: rgba(242, 242, 242, 1);
+
+  --soft-color: var(--green);
+
+  --font-family: system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
+
+  --small-space: 0.75rem;
+  --space: calc(var(--small-space) * 1.5);
+  --large-space: calc(var(--small-space) * 2);
+  --x-large-space: calc(var(--small-space) * 2.5);
+
+  --background: var(--black);
+  --foreground: var(--white);
+
+  --small-font-size: 0.7em;
+
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--black);
+    --foreground: var(--white);
+    --border-color: var(--gray);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: var(--white);
+    --foreground: var(--black);
+    --border-color: var(--dark-green);
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-family);
+}
+
+a {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  /* margin: var(--x-large-space) 0; */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 1.802rem;
+}
+
+h2 {
+  font-size: 1.602rem;
+}
+
+h3 {
+  font-size: 1.424rem;
+}
+
+h4 {
+  font-size: 1.266rem;
+}
+
+h5 {
+  font-size: 1.125rem;
+}
+
+small,
+.text_small {
+  font-size: 0.889rem;
+}
