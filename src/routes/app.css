@@ -1,0 +1,123 @@
+@import 'reset.css';
+@import 'typography.css';
+@import '@fontsource/questrial';
+@import '@fontsource/fira-code';
+
+html {
+  /* font */
+  --font-sans: 'Questrial', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+
+  /* colors */
+  --oled-black: hsl(0, 0%, 0%);
+  --black-1: hsl(0, 0%, 13%);
+  --black-2: hsl(0, 0%, 27%);
+
+  --white-1: hsl(0, 0%, 87%);
+  --white-2: hsl(0, 0%, 73%);
+
+  --orange-1: hsl(18, 100%, 56%);
+  --orange-2: hsl(18, 100%, 50%);
+
+  /* gradients */
+  --gradient-dark: linear-gradient(135deg, var(--black-2), var(--black-1));
+  --gradient-light: linear-gradient(235deg, var(--white-2), var(--white-1));
+
+  /* dark */
+  --brand-dark: var(--orange-1);
+  --text-1-dark: var(--white-1);
+  --text-2-dark: var(--white-2);
+  --surface-1-dark: var(--black-1);
+  --surface-2-dark: var(--black-2);
+  --background-dark: var(--gradient-dark);
+  --border-dark: var(--orange-1);
+
+  /* light */
+  --brand-light: var(--orange-2);
+  --text-1-light: var(--black-1);
+  --text-2-light: var(--black-2);
+  --surface-1-light: var(--white-1);
+  --surface-2-light: var(--white-2);
+  --background-light: var(--gradient-light);
+  --border-light: var(--orange-2);
+}
+
+:root {
+  color-scheme: dark;
+
+  --brand: var(--brand-dark);
+  --brand-accent: var(--brand-light);
+  --text-1: var(--text-1-dark);
+  --text-2: var(--text-2-dark);
+  --surface-1: var(--surface-1-dark);
+  --surface-2: var(--surface-2-dark);
+  --background: var(--background-dark);
+  --border: var(--border-dark);
+  --gradient: var(--gradient-dark);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+
+    --brand: var(--brand-light);
+    --brand-accent: var(--brand-dark);
+    --text-1: var(--text-1-light);
+    --text-2: var(--text-2-light);
+    --surface-1: var(--surface-1-light);
+    --surface-2: var(--surface-2-light);
+    --background: var(--background-light);
+    --border: var(--border-light);
+    --gradient: var(--gradient-light);
+  }
+}
+
+[color-scheme='dark'] {
+  color-scheme: dark;
+
+  --brand: var(--brand-dark);
+  --brand-accent: var(--brand-light);
+  --text-1: var(--text-1-dark);
+  --text-2: var(--text-2-dark);
+  --surface-1: var(--surface-1-dark);
+  --surface-2: var(--surface-2-dark);
+  --background: var(--background-dark);
+  --border: var(--border-dark);
+  --gradient: var(--gradient-dark);
+}
+
+[color-scheme='light'] {
+  color-scheme: light;
+
+  --brand: var(--brand-light);
+  --brand-accent: var(--brand-dark);
+  --text-1: var(--text-1-light);
+  --text-2: var(--text-2-light);
+  --surface-1: var(--surface-1-light);
+  --surface-2: var(--surface-2-light);
+  --background: var(--background-light);
+  --border: var(--border-light);
+  --gradient: var(--gradient-light);
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: var(--text-1);
+  background: var(--gradient);
+  min-height: 100vh;
+}
+
+a {
+  color: var(--brand);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: var(--brand-accent);
+}
