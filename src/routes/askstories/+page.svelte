@@ -1,8 +1,7 @@
 <script lang="ts">
 	import PaginationNav from '$lib/components/PaginationNav.svelte';
 	import ExternalLink from '$lib/components/ExternalLink.svelte';
-	import Link from '$lib/components/Link.svelte';
-	import { formatedDate, getHostName } from '$lib/utils';
+	import { formatedDate } from '$lib/utils';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -10,6 +9,10 @@
 	$: page = data?.page;
 	$: stories = data?.stories;
 </script>
+
+<svelte:head>
+	<title>Ask Hacker News</title>
+</svelte:head>
 
 <h2>Ask Hacker News</h2>
 

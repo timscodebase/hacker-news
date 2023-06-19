@@ -35,7 +35,6 @@ export const load: PageServerLoad = async ({ fetch }) => {
     const story: Story = await response.json()
     return story
   }))
-
   console.log('Stories: ', stories);
   
   return {
@@ -78,7 +77,6 @@ export const actions: Actions = {
     }
   },
   reset: async () => {
-    console.log('story_links', story_links);
     page = 1
     const start = (page - 1) * pageSize;
     const end = start + pageSize;
