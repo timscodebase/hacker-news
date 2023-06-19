@@ -35,6 +35,8 @@ export const load: PageServerLoad = async ({ fetch }) => {
     const story: Story = await response.json()
     return story
   }))
+
+  console.log('Stories: ', stories);
   
   return {
     page,

@@ -21,7 +21,6 @@
 					<ExternalLink href={`${story.url}`}>
 						{story.title}
 					</ExternalLink>
-					<Link className="soft" href={`/${story.id}`}>({getHostName(story.url)})</Link>
 				</p>
 				<p class="small">
 					{story.score} points by {story.by}

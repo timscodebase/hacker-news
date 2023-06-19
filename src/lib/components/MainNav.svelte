@@ -28,8 +28,12 @@
 </nav>
 
 <style>
+	nav {
+		display: flex;
+		align-items: center;
+	}
 	ul {
 		display: flex;
-		gap: var(--small-space);
+		gap: 1rem;
 	}
 </style>

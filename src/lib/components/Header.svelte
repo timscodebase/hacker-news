@@ -4,21 +4,28 @@
 </script>
 
 <header>
-	<form method="POST" action="?/reset" use:enhance>
-		<button type="submit">
+	<div class="logo">
+		<a href="/">
 			<h1>Hacker News</h1>
-		</button>
-	</form>
+		</a>
+	</div>
 	<MainNav />
 </header>
 
 <style>
 	header {
+		display: grid;
+		grid-template-columns: 1fr auto;
+	}
+
+	@media (max-width: 800px) {
+		header {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.logo {
 		display: flex;
 		align-items: center;
-		gap: var(--small-space);
-		padding: var(--small-space);
-		border-bottom: 2px solid var(--border-color);
-		margin-bottom: var(--large-space);
 	}
 </style>
