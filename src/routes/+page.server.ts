@@ -1,5 +1,5 @@
 import type { Actions, PageServerLoad } from './$types'
-import { base_url, number_of_topstories } from '$lib/config'
+import { number_of_topstories } from '$lib/config'
 
 interface Story {
   by: string;
