@@ -121,3 +121,11 @@ a:hover {
 a:visited {
   color: var(--brand-accent);
 }
+
+@media (max-width: 800px) {
+  a {
+    display: inline-block;
+    margin: 0.25rem;
+    padding: 0.25rem;
+  }
+}
